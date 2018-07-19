@@ -93,5 +93,5 @@ C:\Users\Jason\Desktop\AngMvc\AngMvc\bin\Microsoft.CodeDom.Providers.DotNetCompi
 C:\Users\Jason\Desktop\AngMvc\AngMvc\obj\Debug\AngMvc.csproj.CopyComplete
 C:\Users\Jason\Desktop\AngMvc\AngMvc\obj\Debug\AngMvc.dll
 C:\Users\Jason\Desktop\AngMvc\AngMvc\obj\Debug\AngMvc.pdb
-C:\Users\Jason\Desktop\AngMvc\AngMvc\obj\Debug\AngMvc.Migrations.Init.resources
+C:\Users\Jason\Desktop\AngMvc\AngMvc\obj\Debug\AngMvc.Migrations.init.resources
 C:\Users\Jason\Desktop\AngMvc\AngMvc\obj\Debug\AngMvc.csproj.GenerateResource.cache
