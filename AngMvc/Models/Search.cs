@@ -114,15 +114,15 @@ namespace AngMvc.Models
             var countries = _db.Countries.ToList();
             var images = _db.Images.ToList();
 
-            List<Person> people = new List<Person>
+            List<Person> people = new List<Person>();
+
+            people.Add(new Person
             {
-                new Person
-                {
-                    FirstName = "John",
-                    LastName = "Smith",
-                    Email = "John@Smith.com"
-                }
-            };
+                FirstName = "John",
+                LastName = "Smith",
+                Email = "John@Smith.com"
+            });
+          
             people[0].Country = countries.First(x => x.CountryName == "Denmark");
             people[0].CountryId = countries.First(x => x.CountryName == "Denmark").CountryId;
             people[0].ProfilePicture = images.First(x => x.ImageName == "Img3");
