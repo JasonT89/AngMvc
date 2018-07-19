@@ -57,8 +57,8 @@ namespace AngMvc.Controllers
                 model.FirstName = person.FirstName;
                 model.LastName = person.LastName;
                 model.Email = person.Email;
-                //model.Country = _db.Countries.First(x => x.CountryName == person.Country.CountryName);
-                //model.CountryId = _db.Countries.First(x => x.CountryName == person.Country.CountryName).CountryId;
+                model.Country = _db.Countries.First(x => x.CountryName == person.Country.CountryName);
+                model.CountryId = _db.Countries.First(x => x.CountryName == person.Country.CountryName).CountryId;
                 model.ProfilePictureId = person.ProfilePictureId;
 
                 _db.SaveChanges();
@@ -81,8 +81,8 @@ namespace AngMvc.Controllers
                     FirstName = person.FirstName,
                     LastName = person.LastName,
                     Email = person.Email,
-                    //Country = _db.Countries.First(x => x.CountryName == person.Country.CountryName),
-                    //CountryId = _db.Countries.First(x => x.CountryName == person.Country.CountryName).CountryId,
+                    Country = _db.Countries.First(x => x.CountryName == person.Country.CountryName),
+                    CountryId = _db.Countries.First(x => x.CountryName == person.Country.CountryName).CountryId,
                     ProfilePictureId = img.ImageId,
                     ProfilePicture = img
                 };

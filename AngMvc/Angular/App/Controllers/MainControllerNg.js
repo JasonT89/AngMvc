@@ -54,15 +54,4 @@
 }());
 
 
-        //var promise = $http.get("/Home/GetPerson");
-
-        //promise.then(function (response) {
-        //    $scope.person = response.data;
-        //});
-
-
-        //var peopleGet = $http.get("/Home/SearchPeople");
-
-        //peopleGet.then(function (response) {
-        //    $scope.people = response.data;
-        //});
+      
