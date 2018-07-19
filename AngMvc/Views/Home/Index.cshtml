@@ -14,6 +14,8 @@
 
         <input type="search" placeholder="Search" ng-model="name" />
         <input type="submit" value="Search" ng-click="search(name, searchCriteria)" />
+
+       
     </form>
     <hr />
     <table class="table">
@@ -21,8 +23,7 @@
             <td>{{p.FirstName}}</td>
             <td>{{p.LastName}}</td>
             <td>{{p.Email}}</td>
-            <td>
-                @using (Ajax.BeginForm("Edit", new AjaxOptions()
+            <td>@using (Ajax.BeginForm("Edit", new AjaxOptions()
                 {
                     HttpMethod = "GET",
                     UpdateTargetId = "EditView",
@@ -32,8 +33,7 @@
                     <input type="hidden" name="Id" value="{{p.PersonId}}" />
                     <input type="submit" value="Edit" class="btn btn-default btn-sm" />
 
-                }
-        </td>
+                }</td>
         <td>{{p.Country.CountryName}}</td>
         <td><img ng-src="data:image/JPEG;charset=utf-8;base64,{{p.ProfilePicture}}" height="50" width="50"></td>
     </tr>

@@ -47,7 +47,7 @@
             $http.get("{Home/Edit/" + PersonId);
         };
 
-        init();
+        Init();
     });
 
     appModule.controller('MainControllerNg', [MainControllerNg]);

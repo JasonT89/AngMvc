@@ -52,7 +52,7 @@ namespace AngMvc.Models
                 if (searchCriteria == "Country")
                 {
                     result = _db.People.Include("ProfilePicture")
-                                           .Include("Country").OrderBy(x => x.Country.CountryName).ToList();
+                                           .Include("Country")/*.OrderBy(x => x.Country.CountryName)*/.ToList();
                 }
                 else if (searchCriteria == "LastName")
                 {
@@ -83,8 +83,8 @@ namespace AngMvc.Models
                     {
                         result = _db.People.Include("ProfilePicture")
                                            .Include("Country")
-                                           .OrderBy(x => x.Country.CountryName).ThenBy(x => x.FirstName)
-                                           .Where(x => x.Country.CountryName.Contains(url))
+                                           /*.OrderBy(x => x.Country.CountryName)*/.ThenBy(x => x.FirstName)
+                                           //.Where(x => x.Country.CountryName.Contains(url))
                                            .ToList();
                     }
                     else
@@ -123,10 +123,10 @@ namespace AngMvc.Models
                     Email = "John@Smith.com"
                 }
             };
-            people[0].Country = countries.First(x => x.CountryName == "Denmark");
-            people[0].CountryId = countries.First(x => x.CountryName == "Denmark").CountryId;
-            people[0].ProfilePicture = images.First(x => x.ImageName == "Img3");
-            people[0].ProfilePictureId = images.First(x => x.ImageName == "Img3").ImageId;
+            //people[0].Country = countries.First(x => x.CountryName == "Denmark");
+            //people[0].CountryId = countries.First(x => x.CountryName == "Denmark").CountryId;
+            //people[0].ProfilePicture = images.First(x => x.ImageName == "Img3");
+            //people[0].ProfilePictureId = images.First(x => x.ImageName == "Img3").ImageId;
 
             people.Add(new Person
             {
@@ -134,10 +134,10 @@ namespace AngMvc.Models
                 LastName = "Smith",
                 Email = "Jane@Smith.com"
             });
-            people[1].Country = countries.First(x => x.CountryName == "Denmark");
-            people[1].CountryId = countries.First(x => x.CountryName == "Denmark").CountryId;
-            people[1].ProfilePicture = images.First(x => x.ImageName == "Img5");
-            people[1].ProfilePictureId = images.First(x => x.ImageName == "Img5").ImageId;
+            //people[1].Country = countries.First(x => x.CountryName == "Denmark");
+            //people[1].CountryId = countries.First(x => x.CountryName == "Denmark").CountryId;
+            ////people[1].ProfilePicture = images.First(x => x.ImageName == "Img5");
+            ////people[1].ProfilePictureId = images.First(x => x.ImageName == "Img5").ImageId;
 
             people.Add(new Person
             {
@@ -145,10 +145,10 @@ namespace AngMvc.Models
                 LastName = "Hogan",
                 Email = "Hogan@Hogan.com"
             });
-            people[2].Country = countries.First(x => x.CountryName == "Denmark");
-            people[2].CountryId = countries.First(x => x.CountryName == "Denmark").CountryId;
-            people[2].ProfilePicture = images.First(x => x.ImageName == "Img6");
-            people[2].ProfilePictureId = images.First(x => x.ImageName == "Img6").ImageId;
+            //people[2].Country = countries.First(x => x.CountryName == "Denmark");
+            //people[2].CountryId = countries.First(x => x.CountryName == "Denmark").CountryId;
+            ////people[2].ProfilePicture = images.First(x => x.ImageName == "Img6");
+            ////people[2].ProfilePictureId = images.First(x => x.ImageName == "Img6").ImageId;
 
             people.Add(new Person
             {
@@ -156,18 +156,18 @@ namespace AngMvc.Models
                 LastName = "Snowman",
                 Email = "KillMe@Faster.com"
             });
-            people[3].Country = countries.First(x => x.CountryName == "Norway");
-            people[3].CountryId = countries.First(x => x.CountryName == "Norway").CountryId;
-            people[3].ProfilePicture = images.First(x => x.ImageName == "Img4");
-            people[3].ProfilePictureId = images.First(x => x.ImageName == "Img4").ImageId;
+            //people[3].Country = countries.First(x => x.CountryName == "Norway");
+            //people[3].CountryId = countries.First(x => x.CountryName == "Norway").CountryId;
+            ////people[3].ProfilePicture = images.First(x => x.ImageName == "Img4");
+            ////people[3].ProfilePictureId = images.First(x => x.ImageName == "Img4").ImageId;
 
 
-            foreach (var item in people)
-            {
-                _db.People.Add(item);
-            };
+            //foreach (var item in people)
+            //{
+            //    _db.People.Add(item);
+            //};
 
-            _db.SaveChanges();
+            //_db.SaveChanges();
         }
     }
 }

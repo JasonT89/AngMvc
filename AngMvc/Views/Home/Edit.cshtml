@@ -13,7 +13,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ProfilePicture, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                <img ng-src="data:image/JPEG;charset=utf-8;base64,@Model.ProfilePicture" height="50" width="50">
+                <img ng-src="data:image/JPEG;charset=utf-8;base64,@Model.ProfilePicture" height="50" width="50">    
                 @*@Html.EditorFor(model => model.ProfilePicture, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.ProfilePicture, "", new { @class = "text-danger" })*@
             </div>

@@ -41,8 +41,8 @@ namespace AngMvc.Models
             FirstName = person.FirstName;
             LastName = person.LastName;
             Email = person.Email;
-            CountryId = person.CountryId;
-            Country = person.Country;
+            //CountryId = person.CountryId;
+            //Country = person.Country;
         }
     }
 }
