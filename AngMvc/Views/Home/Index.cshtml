@@ -1,0 +1,58 @@
+﻿@model IEnumerable<AngMvc.Models.PersonViewModel>
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-controller="MainControllerNg">
+    <br />
+    <br />
+    <form name="searchPeople">
+        <label><input type="radio" value="FirstName" ng-model="searchCriteria" checked />By Firstname</label>
+        <label><input type="radio" value="LastName" ng-model="searchCriteria" />By Lastname</label>
+        <label><input type="radio" value="Country" ng-model="searchCriteria" />By Country</label>
+
+        <input type="search" placeholder="Search" ng-model="name" />
+        <input type="submit" value="Search" ng-click="search(name, searchCriteria)" />
+    </form>
+    <hr />
+    <table class="table">
+        <tr ng-repeat="p in people">
+            <td>{{p.FirstName}}</td>
+            <td>{{p.LastName}}</td>
+            <td>{{p.Email}}</td>
+            <td>
+                @using (Ajax.BeginForm("Edit", new AjaxOptions()
+                {
+                    HttpMethod = "GET",
+                    UpdateTargetId = "EditView",
+                    InsertionMode = InsertionMode.Replace
+                }))
+                {
+                    <input type="hidden" name="Id" value="{{p.PersonId}}" />
+                    <input type="submit" value="Edit" class="btn btn-default btn-sm" />
+
+                }
+        </td>
+        <td>{{p.Country.CountryName}}</td>
+        <td><img ng-src="data:image/JPEG;charset=utf-8;base64,{{p.ProfilePicture}}" height="50" width="50"></td>
+    </tr>
+
+</table>
+
+<div id="EditView">
+
+
+</div>
+
+@*<input type="button" value="Edit" ng-click="edit({{p.PersonId}})"/>*@
+
+@*<table class="table">
+        <tr ng-repeat="p in pictures">
+            <td>{{p.ImageId}}</td>
+            <td>{{p.ImageName}}</td>
+            <td><img ng-src="data:image/JPEG;base64,{{p.Image}}" height="75" width="75"></td>
+        </tr>
+
+    </table>*@
+</div>

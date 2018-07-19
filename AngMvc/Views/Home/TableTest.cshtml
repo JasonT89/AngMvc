@@ -1,0 +1,12 @@
+﻿@model List<string>
+
+@{
+    ViewBag.Title = "TableTest";
+}
+
+<h2>TableTest</h2>
+
+@foreach (var item in Model)
+{
+    <img scr="@item" />
+}
